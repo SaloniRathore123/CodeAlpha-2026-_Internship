@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Image Gallery</h1>
+
+        <div class="filters">
+            <button class="btn active" onclick="filterSelection('all')">Show all</button>
+            <button class="btn" onclick="filterSelection('nature')">Nature</button>
+            <button class="btn" onclick="filterSelection('watch')">Watch</button>
+            <button class="btn" onclick="filterSelection('pizza')">Pizza</button>
+            <button class="btn" onclick="filterSelection('smartphone')">SmartPhone</button>
+            <button class="btn" onclick="filterSelection('ramen')">Ramen</button>
+            <button class="btn" onclick="filterSelection('noodles')">Noodles</button>
+            <button class="btn" onclick="filterSelection('burger')">Burger</button>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item nature">
+                <img src="images/scenery1.jpg"  onclick="openLightbox(0)">
+            </div>
+            <div class="gallery-item nature">
+                <img src="images/scenery2.jpg"  onclick="openLightbox(1)">
+            </div>
+            <div class="gallery-item nature">
+                <img src="images/scenery3.jpg"  onclick="openLightbox(2)">
+            </div>
+            <div class="gallery-item watch">
+                <img src="images/watch1.jpg"  onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item watch">
+                <img src="images/watch2.jpg"  onclick="openLightbox(4)">
+            </div>
+            <div class="gallery-item burger">
+                <img src="images/burger1.jpg"  onclick="openLightbox(5)">
+            </div>
+            <div class="gallery-item burger">
+                <img src="images/burger2.jpg"  onclick="openLightbox(6)">
+            </div>
+            <div class="gallery-item noodles">
+                <img src="images/noodels1.jpg"  onclick="openLightbox(7)">
+            </div>
+            <div class="gallery-item noodles">
+                <img src="images/noodle.jpg"  onclick="openLightbox(8)">
+            </div>
+            <div class="gallery-item pizza">
+                <img src="images/pizza1.jpg"  onclick="openLightbox(9)">
+            </div>
+            <div class="gallery-item pizza">
+                <img src="images/pizza2.jpg"  onclick="openLightbox(10)">
+            </div>
+            <div class="gallery-item pizza">
+                <img src="images/pizza3.jpg"  onclick="openLightbox(11)">
+            </div>
+            <div class="gallery-item ramen">
+                <img src="images/ramen1.jpg"  onclick="openLightbox(12)">
+            </div>
+            <div class="gallery-item ramen">
+                <img src="images/ramens2.jpg"  onclick="openLightbox(13)">
+            </div>
+             <div class="gallery-item smartphone">
+                <img src="images/smartphone1.jpg"  onclick="openLightbox(14)">
+            </div>
+             <div class="gallery-item smartphone">
+                <img src="images/smartphone2.jpeg"  onclick="openLightbox(15)">
+            </div>
+        </div>
+    </div>
+
+
+    <div id="lightbox" class="modal">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <div class="modal-content">
+            <img id="lightbox-img" src="images/watch2.jpg">
+            <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+            <a class="next" onclick="changeImage(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
