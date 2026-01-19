@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="song">
+            <h2 id="title">Song Title</h2>
+            <h3 id="artist">Artist Name</h3>
+        </div>
+
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="duration-wrapper">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prev" title="Previous"><i class="fas fa-backward-step"></i></button>
+            <button id="play" class="play-button" title="Play"><i class="fas fa-play"></i></button>
+            <button id="next" title="Next"><i class="fas fa-forward-step"></i></button>
+        </div>
+
+        <div class="volume-container">
+            <i class="fas fa-volume-low" title="Decrease volume"></i>
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+            <i class="fas fa-volume-high" title="Increase volume"></i>
+        </div>
+
+        <div class="playlist">
+            <h2>Playlist</h2>
+            <ul id="playlist-list"></ul>
+        </div>
+    </div>
+
+    <audio id="audio" src=""></audio>
+    <script src="script.js"></script>
+</body>
+</html>
